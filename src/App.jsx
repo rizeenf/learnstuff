@@ -5,11 +5,10 @@ import TaskList from "./Components/TaskList";
 
 function App() {
   const [texts, setText] = useState(initialTask);
-  let idNext = 3;
 
   const handleAddTask = (e) => {
     setText([
-      ...TextEncoderStream,
+      ...texts,
       {
         id: idNext++,
         name: e,
@@ -18,17 +17,33 @@ function App() {
     ]);
   };
 
+  const handleEditTask = (e) => {
+    //
+    console.log(e);
+  };
+
+  const handleDeleteTask = (e) => {
+    //
+    console.log(e.id);
+    setText(texts.filter((Text) => Text.id !== e.id));
+  };
+
   return (
     <>
       <div>
         <h2>Task lister</h2>
         <AddTask onAddTask={handleAddTask} />
-        <TaskList tasks={texts} />
+        <TaskList
+          tasks={texts}
+          onEditTask={handleEditTask}
+          onDeleteTask={handleDeleteTask}
+        />
       </div>
     </>
   );
 }
 
+let idNext = 3;
 const initialTask = [
   {
     id: 0,

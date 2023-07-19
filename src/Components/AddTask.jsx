@@ -19,6 +19,7 @@ function AddTask({ onAddTask }) {
       >
         Add
       </button>
+      <br />
     </>
   );
 }
