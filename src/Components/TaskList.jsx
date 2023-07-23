@@ -9,6 +9,7 @@ function TaskList({ tasks, onEditTask, onDeleteTask }) {
           <span>{task.name}</span>
           <button onClick={() => onEditTask(task)}>Edit</button>
           <button onClick={() => onDeleteTask(task)}>Delete</button>
+          <span>test</span>
         </div>
       ))}
     </>
