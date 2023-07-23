@@ -1,14 +1,12 @@
 import React from "react";
+import Task from "./Task";
 
-function TaskList({ tasks, onEditTask, onDeleteTask }) {
+function TaskList({ tasks, onChangeStatus, onDeleteTask }) {
   return (
     <>
       {tasks.map((task) => (
         <div key={task.id}>
-          <input type="checkbox" checked={task.selesai} />
-          <span>{task.name}</span>
-          <button onClick={() => onEditTask(task)}>Edit</button>
-          <button onClick={() => onDeleteTask(task)}>Delete</button>
+          <Task task={task} onDelete={onDeleteTask} onChange={onChangeStatus} />
         </div>
       ))}
     </>

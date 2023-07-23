@@ -17,13 +17,19 @@ function App() {
     ]);
   };
 
-  const handleEditTask = (e) => {
-    //
-    console.log(e);
+  const handleChangeStatus = (task) => {
+    setText(
+      texts.map((t) => {
+        if (t.id === task.id) {
+          return task;
+        } else {
+          return t;
+        }
+      })
+    );
   };
 
   const handleDeleteTask = (e) => {
-    //
     console.log(e.id);
     setText(texts.filter((Text) => Text.id !== e.id));
   };
@@ -35,7 +41,7 @@ function App() {
         <AddTask onAddTask={handleAddTask} />
         <TaskList
           tasks={texts}
-          onEditTask={handleEditTask}
+          onChangeStatus={handleChangeStatus}
           onDeleteTask={handleDeleteTask}
         />
       </div>
