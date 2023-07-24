@@ -11,22 +11,28 @@ function App() {
   const handleAddTask = (input) => {
     dispatch({
       type: "ADD",
-      id: idNext++,
-      name: input,
+      payload: {
+        id: idNext++,
+        name: input,
+      },
     });
   };
 
   const handleChangeStatus = (task) => {
     dispatch({
       type: "EDIT",
-      task: task,
+      payload: {
+        task: task,
+      },
     });
   };
 
   const handleDeleteTask = (task) => {
     dispatch({
       type: "DELETE",
-      id: task.id,
+      payload: {
+        id: task.id,
+      },
     });
   };
 

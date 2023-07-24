@@ -4,8 +4,8 @@ export const taskReducer = (state, action) => {
       return [
         ...state,
         {
-          id: action.id,
-          name: action.name,
+          id: action.payload.id,
+          name: action.payload.name,
           selesai: false,
         },
       ];
@@ -13,8 +13,8 @@ export const taskReducer = (state, action) => {
 
     case "EDIT": {
       return state.map((t) => {
-        if (t.id === action.task.id) {
-          return action.task;
+        if (t.id === action.payload.task.id) {
+          return action.payload.task;
         } else {
           return t;
         }
@@ -22,7 +22,7 @@ export const taskReducer = (state, action) => {
     }
 
     case "DELETE": {
-      return state.filter((Text) => Text.id !== action.id);
+      return state.filter((Text) => Text.id !== action.payload.id);
     }
 
     default: {
