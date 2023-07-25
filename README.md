@@ -8,7 +8,7 @@ Every single stuff that idk where to put it on, so i decided to put it here, her
   - useEffect (done / not in this repo)
 
 
-on going to learn:
+> On going to learn:
   - useCallback
   - useMemo
   - Redux
