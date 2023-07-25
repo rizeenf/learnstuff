@@ -1,6 +1,6 @@
 # learnstuff
 
-Every single stuff that idk where to put it on, so i decided to put it here, heres the stuff:
+> Every single stuff that idk where to put it on, so i decided to put it here, heres the stuff:
   - useState (done)
   - useReducer (done)
   - useContext (done / not in this repo)
