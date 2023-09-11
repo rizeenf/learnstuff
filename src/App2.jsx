@@ -16,7 +16,7 @@ function App2() {
 
   let content;
   {
-    if (!state) {
+    if (state === null) {
       content = (
         <>
           <span>Data kosong</span>
