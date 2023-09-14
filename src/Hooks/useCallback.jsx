@@ -5,9 +5,9 @@ const Callback = () => {
   const [counter, setCounter] = useState(0);
   const [isShowData, setIsShowData] = useState(false);
 
-  // const GetCounterData = useCallback(() => {
-  //   return [counter * 2, counter * 3, counter * 4];
-  // }, [counter]);
+  const GetCounterData = useCallback(() => {
+    return [counter * 2, counter * 3, counter * 4];
+  }, [counter]);
 
   const GetRandomData = useCallback(() => {
     const data = Math.floor(Math.random() * 100);
