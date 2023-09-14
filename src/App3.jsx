@@ -3,6 +3,7 @@ import React from "react";
 import MoneyChanger from "./Components/HOC/MoneyChanger";
 import Money2Changer from "./Components/HOC/Money2Changer";
 import Callback from "./Hooks/useCallback";
+import Ref from "./Hooks/useRef";
 import FetchData from "./Components/FetchData";
 
 const App3 = () => {
@@ -11,7 +12,9 @@ const App3 = () => {
       {/* <MoneyChanger />
       <Money2Changer /> */}
 
-      <FetchData />
+      {/* <FetchData /> */}
+
+      <Ref />
     </div>
   );
 };
