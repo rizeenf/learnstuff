@@ -1,13 +1,14 @@
 import React, { useState } from "react";
-import UpdatedComponent from "./HOC";
+// import UpdatedComponent from "./HOC";
+import withUser from "../../HOC/withUser";
 
-const Money2Changer = ({ money, handleAdd }) => {
+const Money2Changer = ({ counter, addCounter }) => {
   return (
     <div>
-      <h3>Money2Changer right now {money} juta rupiah </h3>
-      <button onClick={handleAdd}>Tingkatkan</button>
+      <h3>Money2Changer right now {counter} juta rupiah </h3>
+      <button onClick={addCounter}>Tingkatkan</button>
     </div>
   );
 };
 
-export default UpdatedComponent(Money2Changer);
+export default withUser(Money2Changer);
